@@ -25,9 +25,13 @@ class ExpenseDataService {
 		return http.delete(`/expenses`);
 	}
 	
+	findByTitle(title){
+		return http.get(`/expenses?title=${title}`);
+	}
+	
 	findByDescription(desc){
-		return http.get(`/expenses?desc=${desc}`
+		return http.get(`/expenses?desc=${desc}`);
 	}
 }
 
-export default new 
+export default new ExpenseDataService();
